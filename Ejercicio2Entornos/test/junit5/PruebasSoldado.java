@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 
 import Alfonso.Soldado;
 
+/**
+ * 
+ * @author Alfonso Lobato de la Sierra
+ *
+ */
+
 class PruebasSoldado {
 
 	/*
@@ -80,20 +86,6 @@ class PruebasSoldado {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 
 }

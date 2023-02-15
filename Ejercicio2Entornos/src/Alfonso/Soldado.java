@@ -7,7 +7,7 @@ package Alfonso;
  * <br><br>
  * <b>Atributos de la clase</b>
  * 
- *  * <ul>
+ * <ul>
  * <li>estaMuerto</li>
  * <li>numeroBalas</li>
  * </ul>
