@@ -14,78 +14,63 @@ import Alfonso.Soldado;
 
 class PruebasSoldado {
 
-	/*
-	 * Testing método puedeDisparar.
-	 * Para este método tenemos que pasar 2 pruebas mínimas, ya que el método solo va a devolver true o false
-	 */
-
 	/**
-	 *  En este Test vamos a probar si el soldado puede disparar si tiene balas
+	 * <b>Testing método puedeDisparar().</b>
+	 * <br><br>
+	 * Para este test tendremos que pasar 2 pruebas mínimas;
+	 * <br><br>
+	 * 1. Se testeara si el soldado puede disparar si tiene balas, para ello primero crearemos un soldado, y le asignaremos
+	 * 	  un numero de balas (40) mediante el método set y hacemos uso del assertTrue ya que el metodo tiene que 
+	 * 	  devolver true si el soldado tiene balas.
+	 * <br><br>
+	 * 2. Se testeará tambien si el soldado puede disparar si no tiene balas, para ello ahora le asignaremos el numero de balas
+	 *    a 0 y haremos uso del assertFalse ya que al no tener balas lo que se espera es que el método devuelva false 
 	 */
 	
 	@Test
-	void testPuedeDispararConBalas() {
+	void testPuedeDisparar() {
 		Soldado soldado1 = new Soldado();
 		soldado1.setNumeroBalas(40);
 		
-		assertTrue(soldado1.puedeDisparar()); //En este caso esperamos que devuelva TRUE ya que si tiene balas
-		
+		assertTrue(soldado1.puedeDisparar()); 
+		soldado1.setNumeroBalas(0);
+		assertFalse(soldado1.puedeDisparar());
 	}
 	
-	/**
-	 *  En este Test vamos a probar si el soldado puede disparar sino tiene balas
-	 */
-	
-	@Test
-	void testPuedeDispararSinBalas() {
-		Soldado soldado1 = new Soldado();
-		soldado1.setNumeroBalas(0);
-		
-		assertFalse(soldado1.puedeDisparar()); //En este caso se espera que devuelva FALSE, ya que no tiene balas
-	
-}
 
-	/*
-	 * Testing del método disparar
-	 * Para este metodo vamos a crear dos soldados, el que dispara y el que es disparado y vamos a pasar 2 pruebas:
-	 * Si cuando dispara el soldado muere
-	 * Y Si cuando dispara el soldado que ha disparado tiene una bala menos.
+	/**
+	 * <b>Testing del método disparar()</b>
+	 * <br><br>
+	 * Para este test se crean dos soldados, el que dispara y el que es disparado tendremos que pasar 2 pruebas mínimas:
+	 * <br><br>
+	 * 1. Se testeara si el soldado disparado esta muerto, ya que una vez disparado, el método disparar pone el atributo de
+	 *    estaMuerto a true, para ello primero le asignaremos un número de balas al soldado que va a disparar y posteriormente 
+	 *    hacemos uso del assertTrue y le pasaremos como parámetro el método getEstaMuerto del soldado disparado que en este caso 
+	 *    tendría que devolver true.
+	 *<br><br>
+	 * 2. Se testeará tambien si el número de balas del soldado que ha disparado ha disminiudo en 1. En este caso le habiamos asignado
+	 * 	  100 balas al soldado que dispara por lo tanto el resultado esperado despues de ejecutar el método debe ser 99. 
+	 * 	  Para obterner el numero de balas hacemos uso del método getNumeroBalas y posteriormente hacemos uso de assertEquals
+	 *    para comprobar si el resultadoEsperado es igual que el resultadoObtenido
+	 * 
+	 * 
+	 * 
 	 */
 	
-	/**
-	 *  En este Test vamos a comprobar si el soldado disparado muere
-	 */
 	
 	@Test
-	void testDisparar1() {
+	void testDisparar() {
 		
-		Soldado soldado1 = new Soldado();
-		Soldado soldado2 = new Soldado(false,50);
+		Soldado soldado1 = new Soldado() ;
+		Soldado soldado2 = new Soldado();
 		soldado1.setNumeroBalas(100);
 		soldado1.disparar(soldado2);
 		assertTrue(soldado2.getEstaMuerto());
 		
-		
-	}
-	
-	/**
-	 * En este Test comprobaremos si el soldado que ha disparado tiene una bala menos
-	 */
-	
-	@Test
-	void testDisparar2() {
-		
-		Soldado soldado1 = new Soldado();
-		Soldado soldado2 = new Soldado(false,50);
-		soldado1.setNumeroBalas(100);
-		soldado1.disparar(soldado2);
 		int resultadoEsperado = 99;
 		int resultadoObtenido = soldado1.getNumeroBalas();
 		assertEquals(resultadoEsperado, resultadoObtenido);
 		
-		
 	}
 	
-
-
 }
