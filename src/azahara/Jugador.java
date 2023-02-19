@@ -5,28 +5,20 @@ package azahara;
  * 
  * Para ello, consta de diferentes métodos que nos proporcionan dicha información.
  * 
- * @author Azahara
+ * @author Azahara Fonseca Escudero
  */
 public class Jugador {
-
+	
+	/**
+	 * Atributos privados de la clase.
+	 */
 	private int dorsal;
 	private int numeroTarjetasAmarillas;
 	private int numeroTarjetasRojas;
 
-	
-	
-	
-	public Jugador() {
-		super();
-	}
-
-	public Jugador(int dorsal, int numeroTarjetasAmarillas, int numeroTarjetasRojas) {
-		super();
-		this.dorsal = dorsal;
-		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
-		this.numeroTarjetasRojas = numeroTarjetasRojas;
-	}
-
+	/**
+	 * Getters and setters.
+	 */
 	public int getDorsal() {
 		return dorsal;
 	}
