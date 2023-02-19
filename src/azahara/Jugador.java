@@ -13,6 +13,44 @@ public class Jugador {
 	private int numeroTarjetasAmarillas;
 	private int numeroTarjetasRojas;
 
+	
+	
+	
+	public Jugador() {
+		super();
+	}
+
+	public Jugador(int dorsal, int numeroTarjetasAmarillas, int numeroTarjetasRojas) {
+		super();
+		this.dorsal = dorsal;
+		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
+		this.numeroTarjetasRojas = numeroTarjetasRojas;
+	}
+
+	public int getDorsal() {
+		return dorsal;
+	}
+
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+
+	public int getNumeroTarjetasAmarillas() {
+		return numeroTarjetasAmarillas;
+	}
+
+	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas) {
+		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
+	}
+
+	public int getNumeroTarjetasRojas() {
+		return numeroTarjetasRojas;
+	}
+
+	public void setNumeroTarjetasRojas(int numeroTarjetasRojas) {
+		this.numeroTarjetasRojas = numeroTarjetasRojas;
+	}
+
 	/**
 	 * Método que establece el valor del atributo dorsal. El número pasado por
 	 * parámetro tiene que ser uno elegido entre 1 y 30. Si introducimos un valor

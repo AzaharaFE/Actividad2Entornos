@@ -12,6 +12,31 @@ public class Soldado {
 	private boolean estaMuerto;
 	private int numeroBalas;
 
+	
+	
+	
+	public Soldado(boolean estaMuerto, int numeroBalas) {
+		super();
+		this.estaMuerto = estaMuerto;
+		this.numeroBalas = numeroBalas;
+	}
+
+	public boolean isEstaMuerto() {
+		return estaMuerto;
+	}
+
+	public void setEstaMuerto(boolean estaMuerto) {
+		this.estaMuerto = estaMuerto;
+	}
+
+	public int getNumeroBalas() {
+		return numeroBalas;
+	}
+
+	public void setNumeroBalas(int numeroBalas) {
+		this.numeroBalas = numeroBalas;
+	}
+
 	/**
 	 * Método que establece el valor del atributo número de balas. Si el número pasado
 	 * por parámetro es mayor de cero, el método devuelve true y por tanto, el soldado
