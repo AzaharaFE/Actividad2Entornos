@@ -73,28 +73,10 @@ package modelo.javabeans;
 			 * 
 			 */
 			
-		    public void disparar(Soldado sol) {
-		    	/*
-		    	 * La solución propuesta para mejorar el código de este método es la siguiente:
-		    	 * 
-		    	 * Nos encontramos con la problemática de que en caso que
-		    	 * el argumento numeroBalas del soldado sobre el que se aplica el método
-		    	 * sea 0 o menor, este disparará igualmente y el método restará una
-		    	 * unidad al argumento numeroBalas, cuando nada de esto debería pasar.
-		    	 * 
-		    	 * Esto ocurre porque no se comprueba primero si el soldado sobre
-		    	 * el que se aplica el método tiene un número positivo en su argumento
-		    	 * numeroBalas.
-		    	 * 
-		    	 * Para solucionarlo añadimos un condicional if pasando como condición
-		    	 * que el argumento numeroBalas del soldado sobre el que se aplica el método
-		    	 * debe ser mayor que 0, de no ser así, el método no realizará ninguna acción.
-		    	 */
-		    	if (this.numeroBalas>0) {
-	            this.numeroBalas--;
-	            sol.estaMuerto = true;
-		    	}
-		    }
+			public void disparar(Soldado sol) {
+                this.numeroBalas--;
+                sol.estaMuerto = true;
+			}
 
 		    //Getter and Setter
 		    

@@ -72,36 +72,23 @@ package modelo.javabeans;
 	
 			/**
 			 * Este método se encarga de decirnos si un jugador debe ser explusado o no en función de las tarjetas que le hayan mostrado
-			 * Si tiene 2 o más tarjetas amarillas será expulsado y el método devolverá true
-			 * Si tiene 1 o más tarjetas rojas será expulsado y el método devolverá true
+			 * Si tiene 2 tarjetas amarillas será expulsado y el método devolverá true
+			 * Si tiene 1 tarjetas rojas será expulsado y el método devolverá true
 			 * Si no tiene 2 tarjetas amarillas ni 1 tarjeta roja, el jugador no debe ser expulsado y el método devolverá false
 			 * 
 			 * @return si el jugador debe estar expulsado devuelve true, en caso contrario devuelve false
 			 */
-			public boolean estaExpulsado() {
-				
-				/*
-				 * La solución propuesta para mejorar y simplificar el código de este método es la siguiente:
-				 * 
-				 * Nos encontramos con la problemática de que si el jugador tiene más de 2 tarjetas amarillas, 
-				 * más de una tarjeta roja o ambas casuísticas a la vez, el método devolverá false en caso de
-				 * aplicarlo sobre dicho jugador, sin embargo el método debería devolver true.
-				 * 
-				 * Para solucionarlo cambiamos dentro de las condiciones de ambos if el == por >=, de este modo
-				 * solucionamos esta problemática.
-				 * 
-				 * Por otra parte, para simplificar el código podemos unir ambos if en uno, ya que cualquiera de
-				 * esas condiciones hace que el método devuelva true, por lo que utilizamos
-				 * el operador lógico || para que en caso de cumplirse cualquiera de las dos condiciones, el método
-				 * devolverá true.
-				 */
-				
-				boolean expulsado = false;
-			    if(numeroTarjetasAmarillas >= 2 || numeroTarjetasRojas >= 1) {
-			        expulsado = true;
-			    }                          
-			    	return expulsado;
-			}
+
+			 public boolean estaExpulsado() {
+                 boolean expulsado = false;                                                  
+                 if(numeroTarjetasAmarillas == 2) {
+                	 expulsado = true;
+                 }                          
+                 if(numeroTarjetasRojas == 1) {
+                	 expulsado = true;
+                 }                          
+                 return expulsado;
+			 }
 			
 			
 			//Getter and Setter
